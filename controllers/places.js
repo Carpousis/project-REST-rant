@@ -1,24 +1,24 @@
 const router = require('express').Router()
 
-router.get('/', (_req, res) => {
-    res.send('GET/places stub')
-    let places = [{
-        name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: 'http://placekitten.com/250/250'
-    },{
-        name: 'Coding Cat Cafe',
-        city: 'Phoenix',
-        state: 'AZ',
-        cuisines: 'Coffee, Bakery',
-        pic: 'http://placekitten.com/250/250'
-    }]
-    res.render('places/index', {places})
-})
+ router.get('/', (req, res) => {
+     res.send('GET /places stub')
+     let places = [{
+         name: 'H-Thai-ML',
+         city: 'Seattle',
+         state: 'WA',
+         cuisines: 'Thai, Pan-Asian',
+         pic: 'http://placekitten.com/250/250'
+     }, {
+         name: 'Coding Cat Cafe',
+         city: 'Phoenix',
+         state: 'AZ',
+         cuisines: 'Coffee, Bakery',
+         pic: 'http://placekitten.com/250/250'
+     }]
+     res.render('places/index', { places })
+ })
 
-router.post('/', (req, res) => {
+ router.post('/', (req, res) => {
     res.send('POST /places stub')
 })
 router.get('/new', (req, res) => {
@@ -42,5 +42,4 @@ router.post('/:id/rant', (req, res) => {
 router.delete('/:id/rant/:rantId', (req, res) => {
     res.send('GET /places/:id/rant/:rantId stub')
 })
-
 module.exports = router
