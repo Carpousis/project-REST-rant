@@ -1,8 +1,5 @@
-
 const router = require('express').Router()
-
 router.get('/', (_req, res) => {
-     res.send('GET /places stub')
      let places = [{
          name: 'H-Thai-ML',
          city: 'Seattle',
@@ -16,7 +13,7 @@ router.get('/', (_req, res) => {
          cuisines: 'Coffee, Bakery',
          pic: 'http://placekitten.com/250/250'
      }]
-     res.render('places/index', {places})
+        res.render('places/index', { places })
  })
 
 //  router.post('/', (req, res) => {

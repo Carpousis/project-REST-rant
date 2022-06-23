@@ -9,9 +9,10 @@ app.use('/places', require('./controllers/places'))
 app.get('/', (_req, res) => {
     res.render('home')
 })
-app.use('/places', require('./controllers/places'))
 app.get('*', (_req, res) => {
     res.render('error404')
 })
+
+
 
 app.listen(process.env.PORT)
