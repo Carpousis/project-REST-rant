@@ -11,7 +11,7 @@ const index = (data) => {
           </div>
         )
       })
-      return (
+        return (
         <Def>
             <main>
                 <h1>PLACES INDEX PAGE</h1>
