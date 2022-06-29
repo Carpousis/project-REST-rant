@@ -6,6 +6,9 @@ const home = () => {
         <Def>
             <main>
                 <h1>HOME</h1>
+                <a>
+                    <button className="btn-primary">Places Page</button>
+                </a>
             </main>
         </Def>
     )
