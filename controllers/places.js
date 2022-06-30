@@ -18,15 +18,21 @@ router.get('/', (_req, res) => {
         res.render('places/index', { places })
  })
 
+ router.get('/new', (req, res) => {
+    res.render('places/new')
+  })
+  router.get('/:id', (req, res) => {
+    res.render('GET /places/:id stub')
+})
+  
+
 //  router.post('/', (req, res) => {
 //     res.send('POST /places stub')
 // })
 // router.get('/new', (req, res) => {
 //     res.send('GET /places/new stub')
 // })
-// router.get('/:id', (req, res) => {
-//     res.send('GET /places/:id stub')
-// })
+
 // router.put('/:id', (req, res) => {
 //     res.send('PUT /places/:id stub')
 // })
