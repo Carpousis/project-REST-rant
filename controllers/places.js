@@ -26,9 +26,9 @@ router.get('/', (_req, res) => {
 })
   
 
-//  router.post('/', (req, res) => {
-//     res.send('POST /places stub')
-// })
+ router.post('/', (req, res) => {
+    res.send('POST /places stub')
+})
 // router.get('/new', (req, res) => {
 //     res.send('GET /places/new stub')
 // })
