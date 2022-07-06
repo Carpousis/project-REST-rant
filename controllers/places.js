@@ -9,9 +9,9 @@ router.get('/', (_req, res) => {
  router.get('/new', (req, res) => {
     res.render('places/new')
   })
-  router.get('/:id', (req, res) => {
-    res.render('GET /places/:id stub')
-})
+//   router.get('/:id', (req, res) => {
+//     res.render('GET /places/:id stub')
+// })
   
  router.post('/', (req, res) => {
     if (!req.body.pic) {
@@ -26,23 +26,26 @@ router.get('/', (_req, res) => {
     places.push(req.body)
     res.redirect('places/')
 })
-// router.get('/new', (req, res) => {
-//     res.send('GET /places/new stub')
-// })
-
-// router.put('/:id', (req, res) => {
-//     res.send('PUT /places/:id stub')
-// })
-// router.delete('/:id', (req, res) => {
-//     res.send('DELETE /places/:id stub')
-// })
-// router.get('/:id/edit', (req, res) => {
-//     res.send('GET /places/:id/edit stub')
-// })
-// router.post('/:id/rant', (req, res) => {
-//     res.send('GET /places/:id/rant stub')
-// })
-// router.delete('/:id/rant/:rantId', (req, res) => {
-//     res.send('GET /places/:id/rant/:rantId stub')
-// })
+router.get('/new', (req, res) => {
+    res.send('GET /places/new stub')
+})
+router.get('/:id', (req, res) => {
+    res.render('places/show')
+  })
+  
+router.put('/:id', (req, res) => {
+    res.send('PUT /places/:id stub')
+})
+router.delete('/:id', (req, res) => {
+    res.send('DELETE /places/:id stub')
+})
+router.get('/:id/edit', (req, res) => {
+    res.send('GET /places/:id/edit stub')
+})
+router.post('/:id/rant', (req, res) => {
+    res.send('GET /places/:id/rant stub')
+})
+router.delete('/:id/rant/:rantId', (req, res) => {
+    res.send('GET /places/:id/rant/:rantId stub')
+})
 module.exports = router
