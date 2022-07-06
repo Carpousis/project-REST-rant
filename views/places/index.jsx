@@ -7,8 +7,8 @@ const index = (data) => {
           <div className="col-sm-6">
             <h2>
               <a href={`/places/${index}`}>
-              </a>
               {place.name}
+              </a>
             </h2>
             <p className="text-center">
               {place.cuisines}
