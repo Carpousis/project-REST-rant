@@ -1,6 +1,6 @@
 const React = require('react')
 const Def = require('../default')
-
+const methodOverride = require('method-override')
 const index = (data) => {
     let placesFormatted = data.places.map((place, index) => {
         return (
