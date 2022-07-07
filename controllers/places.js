@@ -9,7 +9,6 @@ router.get('/', (_req, res) => {
  router.get('/new', (req, res) => {
     res.render('places/new')
   })
-
   
  router.post('/', (req, res) => {
     if (!req.body.pic) {
@@ -25,7 +24,7 @@ router.get('/', (_req, res) => {
     res.redirect('places/')
 })
 router.get('/new', (req, res) => {
-    res.send('GET /places/new stub')
+    res.render('GET /places/new stub')
 })
 router.get('/:id', (req, res) => {
     let id = Number(req.params.id)
@@ -40,9 +39,19 @@ router.get('/:id', (req, res) => {
     }
   })
   
-router.put('/:id', (req, res) => {
-    res.send('PUT /places/:id stub')
-})
+  router.put('/:id', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        res.redirect(`/places/${id}`)
+    }
+  })
+  
 router.delete('/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
